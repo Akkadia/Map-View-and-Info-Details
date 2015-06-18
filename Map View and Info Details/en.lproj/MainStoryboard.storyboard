@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="08i-8E-2wM">
+                                <rect key="frame" x="24" y="64" width="273" height="280"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Aen-GX-V9V"/>
+                                    <constraint firstAttribute="width" constant="273" id="Wgu-uw-jOa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="crj-As-uhT"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-q0-ztK">
+                                <rect key="frame" x="16" y="364" width="275" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="Qb0-29-VNr"/>
+                                    <constraint firstAttribute="width" constant="275" id="hP2-Sd-X3v"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR0-PF-bxq">
+                                <rect key="frame" x="140" y="465" width="41" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="azQ-SE-oIo"/>
+                                    <constraint firstAttribute="width" constant="41" id="cTL-Wd-NGt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="web.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bap-uu-4FU" kind="modal" modalTransitionStyle="coverVertical" id="b7g-JS-Yd9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Press on red pin to reveal info)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ka-Hs-J1f">
+                                <rect key="frame" x="41" y="27" width="238" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(press button)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meP-BU-4Uc">
+                                <rect key="frame" x="127" y="511" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="5Em-U0-HhI"/>
+                                    <constraint firstAttribute="height" constant="21" id="s34-6k-m14"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pR0-PF-bxq" firstAttribute="centerX" secondItem="08i-8E-2wM" secondAttribute="centerX" type="default" id="0t1-bx-VBg"/>
+                            <constraint firstItem="meP-BU-4Uc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="127" id="3Br-Fi-shS"/>
+                            <constraint firstItem="BP9-q0-ztK" firstAttribute="baseline" secondItem="meP-BU-4Uc" secondAttribute="baseline" type="default" id="EPB-el-ELH"/>
+                            <constraint firstItem="4Ka-Hs-J1f" firstAttribute="centerX" secondItem="08i-8E-2wM" secondAttribute="centerX" type="default" id="NLn-Qh-sRD"/>
+                            <constraint firstItem="4Ka-Hs-J1f" firstAttribute="top" secondItem="3" secondAttribute="top" constant="27" id="ZAR-Ml-Fxw"/>
+                            <constraint firstItem="meP-BU-4Uc" firstAttribute="top" secondItem="pR0-PF-bxq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="c3u-q2-xgB"/>
+                            <constraint firstItem="BP9-q0-ztK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="16" id="fO9-o6-y1s"/>
+                            <constraint firstItem="pR0-PF-bxq" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="gcp-17-SlN"/>
+                            <constraint firstAttribute="bottom" secondItem="meP-BU-4Uc" secondAttribute="bottom" constant="16" id="m0z-vA-bdi"/>
+                            <constraint firstItem="08i-8E-2wM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="64" id="y90-vP-0Ib"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pg8-Bp-v63"/>
+                    <connections>
+                        <outlet property="mapView" destination="08i-8E-2wM" id="NPL-lA-8xG"/>
+                        <outlet property="myLabel" destination="BP9-q0-ztK" id="tAl-YQ-sUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="soI-Ao-6B0">
+                    <connections>
+                        <action selector="controlPinch:" destination="2" id="AX4-YC-qSV"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="fgg-hm-eMJ">
+            <objects>
+                <viewController id="Bap-uu-4FU" customClass="Contact" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3gF-mU-iXf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-95-DQz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="tintColor" red="0.46942761479591832" green="0.46942761479591832" blue="0.46942761479591832" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Company" id="ez7-ku-6RL">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="aAq-gs-kUD">
+                                            <connections>
+                                                <segue destination="2" kind="modal" id="Tso-U5-33s"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="123 Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBF-PK-k8c">
+                                <rect key="frame" x="34" y="72" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ark-kY-jcG"/>
+                                    <constraint firstAttribute="width" constant="116" id="yQX-Rp-ykE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                <color key="textColor" red="0.015576151833884375" green="0.016116761461982706" blue="0.091757015306122458" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ramsey, NJ" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="93" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-C5-qfL">
+                                <rect key="frame" x="34" y="96" width="93" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4mp-ZN-aIh"/>
+                                    <constraint firstAttribute="width" constant="93" id="wHV-f1-aXG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
+                                <color key="textColor" red="0.087213010204081676" green="0.087213010204081676" blue="0.087213010204081676" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.97879161010000004" green="0.97879161010000004" blue="0.97879161010000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7u-53-m1C">
+                                <rect key="frame" x="27" y="145" width="266" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="KlD-rc-AJy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="phone32 copy.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="             555-555-555">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="LucidaGrande"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" image="phone32.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="phone" destination="Bap-uu-4FU" eventType="touchUpInside" id="de3-k9-6Ve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53B-y0-FBx">
+                                <rect key="frame" x="27" y="204" width="266" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button" image="web copy.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="      www.example.com">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="LucidaGrande"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="link" destination="Bap-uu-4FU" eventType="touchUpInside" id="vE4-YR-OMW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4SD-1u-tcv">
+                                <rect key="frame" x="27" y="270" width="266" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="gZ1-V3-A8d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="30" maxX="200" maxY="14"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-18" maxX="-7" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="-10" maxX="-10" maxY="8"/>
+                                <state key="normal" image="Maps-icon.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="       60 Wyckoff Ave         Ramsey NJ 07446-2206        United States">
+                                            <attributes>
+                                                <color key="NSColor" red="0.058204145879398844" green="0.092658998414295757" blue="0.15732621173469385" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="maps" destination="Bap-uu-4FU" eventType="touchUpInside" id="RmZ-yO-XXG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90509406887755106" green="0.90509406887755106" blue="0.90509406887755106" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OvE-95-DQz" secondAttribute="trailing" type="default" id="1SF-LW-EzK"/>
+                            <constraint firstItem="f7u-53-m1C" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" constant="145" id="9b3-VI-bVN"/>
+                            <constraint firstItem="53B-y0-FBx" firstAttribute="trailing" secondItem="f7u-53-m1C" secondAttribute="trailing" type="default" id="DZV-yY-LZ4"/>
+                            <constraint firstItem="4SD-1u-tcv" firstAttribute="leading" secondItem="53B-y0-FBx" secondAttribute="leading" type="default" id="K4l-SH-f4H"/>
+                            <constraint firstItem="vBF-PK-k8c" firstAttribute="leading" secondItem="3gF-mU-iXf" secondAttribute="leading" constant="34" id="LT2-I2-61h"/>
+                            <constraint firstItem="T3m-C5-qfL" firstAttribute="leading" secondItem="vBF-PK-k8c" secondAttribute="leading" type="default" id="Y08-Ux-tns"/>
+                            <constraint firstItem="4SD-1u-tcv" firstAttribute="trailing" secondItem="53B-y0-FBx" secondAttribute="trailing" type="default" id="Z9v-kA-iSo"/>
+                            <constraint firstItem="OvE-95-DQz" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" type="default" id="dgu-lR-pov"/>
+                            <constraint firstItem="vBF-PK-k8c" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" constant="72" id="eoT-mA-EBr"/>
+                            <constraint firstItem="OvE-95-DQz" firstAttribute="leading" secondItem="3gF-mU-iXf" secondAttribute="leading" type="default" id="nGh-KN-Vvh"/>
+                            <constraint firstItem="T3m-C5-qfL" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" constant="96" id="nqf-66-Pfn"/>
+                            <constraint firstItem="4SD-1u-tcv" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" constant="270" id="pjn-uO-DrM"/>
+                            <constraint firstItem="OvE-95-DQz" firstAttribute="centerX" secondItem="f7u-53-m1C" secondAttribute="centerX" type="default" id="vnG-2m-4XA"/>
+                            <constraint firstItem="53B-y0-FBx" firstAttribute="top" secondItem="3gF-mU-iXf" secondAttribute="top" constant="204" id="yNZ-f3-4Cj"/>
+                            <constraint firstItem="53B-y0-FBx" firstAttribute="leading" secondItem="f7u-53-m1C" secondAttribute="leading" type="default" id="zON-pY-VbG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qxa-04-oCd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaJ-Vm-wn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Maps-icon.png" width="256" height="256"/>
+        <image name="phone32 copy.png" width="25" height="25"/>
+        <image name="phone32.png" width="32" height="32"/>
+        <image name="web copy.png" width="25" height="25"/>
+        <image name="web.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
